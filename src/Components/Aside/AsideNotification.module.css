@@ -1,0 +1,36 @@
+.AsideNotification{
+    background: #FFF2DE;
+    margin-bottom: "17px";
+    padding: 3.3rem 2.2rem;
+    margin-bottom: 1.7rem;
+    border: 2px solid #DCD1C0;
+    max-width: 27.9rem;
+}
+.AsideNotification p{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    font-weight: 300;
+    color: #707070;
+    margin-bottom: 2rem;
+}
+.AsideNotification button{
+    width: 11.3rem;
+    height: 3.8rem;
+    border: 2px solid #707070;
+    color: #707070;
+    border-radius: 0.6rem;
+    background: transparent;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+@media(max-width: 800px){
+    .AsideNotification{
+        margin: 2rem;
+        max-width: 100%;
+    }
+}

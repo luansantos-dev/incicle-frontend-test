@@ -1,0 +1,12 @@
+.ManagementBoards{
+    background: white;
+    width: 279px;
+    padding: 14px 9px;    
+}
+
+@media(max-width: 800px){
+    .ManagementBoards{
+        margin: 2rem;
+        width: initial;
+    }
+}

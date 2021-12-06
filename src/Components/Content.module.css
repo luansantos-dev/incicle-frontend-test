@@ -1,0 +1,82 @@
+.contentTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  
+}
+
+.contentTitle ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.CardBox{
+  margin-top: 1.5rem;  
+}
+.Card{
+  background: var(--white);
+  margin-bottom: 1rem;
+  padding: 1.4rem 1.1rem;
+
+  display: grid;
+  grid-template-columns: 7.3rem 1fr 2rem;
+  gap: 1.4rem;
+}
+
+.Card img{
+  width: 7.3rem;
+  object-fit: cover;
+}
+
+.Card h2{
+  font-size: 1.6rem;
+  color: var(--gray);
+  margin-bottom: 0.4rem;
+}
+
+.Card p{
+  font-size: 1.3rem;
+  color: var(--gray);
+  margin-bottom: 0.4rem;
+}
+
+.Card .Type{
+  background: var(--btn-bg);
+  font-size: 1rem;
+  color: var(--gray);
+  padding: 0.4rem;
+  font-weight: bold;
+  color: var(--white);
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-right: 0.6rem;
+}
+
+.Card .Date{
+  font-size: 1.2rem;
+  color: var(--gray);
+  padding: 0.4rem;
+  font-weight: 300;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  margin-right: 0.6rem;
+}
+
+.Card .btn{
+  align-self: center;
+  width: 2.4rem;
+  object-fit: cover;
+}
+
+@media(max-width: 600px){
+  .contentTitle{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .CardBox{
+    margin-left: 1.4rem;
+    margin-right: 1.4rem;
+  }
+}
