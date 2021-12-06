@@ -53,12 +53,13 @@
   margin-right: 0.6rem;
 }
 
-.Card .Date{
+.Date,
+.Name,
+.Confirm{
   font-size: 1.2rem;
   color: var(--gray);
   padding: 0.4rem;
   font-weight: 300;
-  display: inline-block;
   text-transform: uppercase;
   margin-bottom: 1rem;
   margin-right: 0.6rem;
@@ -69,6 +70,7 @@
   width: 2.4rem;
   object-fit: cover;
 }
+
 
 @media(max-width: 600px){
   .contentTitle{

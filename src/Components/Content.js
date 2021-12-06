@@ -35,8 +35,7 @@ const Content = () => {
       <p style={{ fontSize: "20px", textAlign: "center" }}>Carregando...</p>
     );
 
-    
-  if (data === null) return null;  
+  if (data === null) return null;
 
   return (
     <section>
@@ -57,19 +56,44 @@ const Content = () => {
       </div>
 
       <div className={style.CardBox}>
-        {data.map((item, index) => (          
+        {data.map((item, index) => (
           <article key={index} className={style.Card}>
             <img src={item.files[0].file} alt={item.title} />
             <div>
-              <h2 style={{color: "#707070"}}>{item.title}</h2>
+              <h2 style={{ color: "#707070" }}>{item.title}</h2>
               <div>
-                <span className={style.Type} style={!(item.type === "release") ? {background: "#EE8686"} : {background: "#3489B1"}}>
-                  {item.type}                              
+                <span
+                  className={style.Type}
+                  style={
+                    !(item.type === "release")
+                      ? { background: "#EE8686" }
+                      : { background: "#3489B1" }
+                  }
+                >
+                  {item.type}
                 </span>
-                {!(item.common.invited_people === undefined) ? <span className={style.Date}>{item.common.invited_people[0].name}</span> : ""}                
-                <span className={style.Date}>{item.date}</span>              
-                {!(item.common.invited_people === undefined) ? <span className={style.Date}>3 confirmações de 15</span> : ""}              
-
+                {!(item.common.invited_people === undefined) ? (
+                  <span className={style.Name}>
+                    {item.common.invited_people[0].name}
+                  </span>
+                ) : (
+                  ""
+                )}
+                <span className={style.Date}>{item.date}</span>
+                {!(item.common.invited_people === undefined) ? (
+                  <span
+                    className={style.Confirm}
+                    style={{
+                      color: "#3489B1",
+                      fontWeight: "700",
+                      textDecoration: "underline",
+                    }}
+                  >
+                    3 confirmações de 15
+                  </span>
+                ) : (
+                  ""
+                )}{" "}
               </div>
               <p>{item.description}</p>
             </div>
@@ -77,10 +101,7 @@ const Content = () => {
               <img src={btnImg} alt="Imagem"></img>
             </div>
           </article>
-          
         ))}
-        
-        
       </div>
     </section>
   );
